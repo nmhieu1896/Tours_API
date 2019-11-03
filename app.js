@@ -29,7 +29,8 @@ app.use('/api', limiter);
 
 app.use(mongoSanitize()); //NoSQL injection
 app.use(xss()); //Cross-Site Scripting
-app.use(  //Http parameter polution
+app.use(
+  //Http parameter polution
   hpp({
     whitelist: [
       'duration',
